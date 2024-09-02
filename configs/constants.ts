@@ -16,9 +16,9 @@ const envParam = {
 const purchaseSupportedNetworks = {
   '1': 'Ethereum',
   '10': 'Optimism',
-  '56': 'BNB',
+  // '56': 'BNB',
   '137': 'Polygon',
-  '8453': 'Base',
+  // '8453': 'Base',
   '42161': 'Arbitrum',
 };
 
