@@ -103,10 +103,12 @@ export const useWeb3Onboard = () => {
 
   const requestSwitchNetwork = async (chainId: string) => {
     try {
-      if (chainId !== wallet.network) {
+      if (parseIntString(chainId) !== parseIntString(wallet.network)) {
         const result = await onboard.setChain({ chainId: parseDexString(chainId) });
         return result;
       }
+
+      return true;
     } catch (error) {
       console.log('error', error);
       return false;
